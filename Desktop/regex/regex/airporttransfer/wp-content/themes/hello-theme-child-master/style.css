@@ -1,0 +1,1058 @@
+/* 
+Theme Name: Hello Elementor Child
+Theme URI: https://github.com/elementor/hello-theme/
+Description: Hello Elementor Child is a child theme of Hello Elementor, created by Elementor team
+Author: Elementor Team
+Author URI: https://elementor.com/
+Template: hello-elementor
+Version: 1.0.1
+Text Domain: hello-elementor-child
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
+*/
+
+/*
+    Add your custom styles here
+*/
+body, html{
+	overflow-x: hidden;
+}
+
+.ui-datepicker:not(.gform-legacy-datepicker) .ui-datepicker-header {
+    border-bottom: 1px solid #118B9E;
+    background: #118B9E;
+}
+.ui-datepicker table tbody>tr:nth-child(odd)>td, table tbody>tr:nth-child(odd)>th {
+    background-color: #fff;
+}
+.ui-datepicker:not(.gform-legacy-datepicker) a.ui-state-default {
+    border-radius: 0;
+}
+.ui-datepicker:not(.gform-legacy-datepicker) a.ui-state-active, .ui-datepicker:not(.gform-legacy-datepicker) a.ui-state-active:hover {
+    background: #118B9E;
+    color: #fff;
+	border-bottom: 1px solid #118B9E;
+}
+
+
+.header{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+}
+.banner{
+	z-index: 1;
+}
+.banner:after{
+	content: '';
+	display: block;
+	width: 424px;
+	height: 292px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background: url(https://webdev.wordpress-developer.us/airporttransfer/wp-content/uploads/2023/03/banner-shape.png) center center no-repeat;
+	background-size: 100% 100%;
+	mix-blend-mode: soft-light;
+	opacity: 0.5;
+	z-index: -1;
+}
+h1 span, h2 span, h3 span{
+	color: #19CEEA;
+}
+.get-In-touch-form .gform_heading{
+	display: none;
+}
+.get-In-touch-form input[type="text"], .get-In-touch-form input[type="email"], .get-In-touch-form textarea{
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-size: 14px !important;
+	color: #A2A2A2;
+	background: #FFFFFF;
+	border-radius: 5px;
+	height: 55px;
+	border: 0;
+	padding: 12px 15px !important;
+}
+.get-In-touch-form textarea{
+	height: 116px !important; 
+	resize: none;
+}
+.car-box{
+	transition: all 0.3s;
+}
+.car-box:hover{
+	background-color: #118B9E !important;
+    background-image: unset !important;
+}
+.car-box:hover h4, .car-box:hover h3, .car-box:hover ul li{
+	color: #fff !important;
+}
+.car-box:hover .elementor-icon-list-icon svg{
+	filter: brightness(0) invert(1);
+}
+
+/*book-form*/
+.b-frm-col{
+	background: #FAFAFA;
+	border-radius: 6px;
+	padding: 13px 55px 13px 15px;
+	position: relative;
+}
+.b-frm-col label{
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+	color: #000000;
+	display: block;
+}
+.b-frm-time-outer{
+	display: flex;
+	flex-wrap: wrap;
+}
+.b-frm-time-outer select{
+	width: 50%;
+}
+.b-frm-col:not(:last-child){
+	margin-bottom: 10px;
+}
+.b-frm-col input[type="text"], .b-frm-col select, .b-frm-col input[type="date"] {
+	font-family: 'Open Sans';
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 0.007em;
+	color: #000000;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: 0;
+	box-shadow: unset;
+	background: transparent;
+}
+.b-frm-col input[type="date"]{
+	min-width: 95%;
+    width: 100%;
+	height: 20px;
+	 -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.b-frm-col select:first-child{
+	margin-right: 15px;
+	width: calc(50% - 15px);
+}
+.b-frm-col select:last-child{
+	padding-left: 15px; 
+	border-left: 1px solid #DCDCDC;
+}
+.b-frm-col.btn-col{
+	background: transparent;
+	padding: 0;
+	border-radius: 0;
+}
+.b-frm-col:after{
+	content: '';
+	display: block;
+	width: 32px;
+	height: 32px;
+	background-color: rgba(0, 0, 0, 0.12);
+	border-radius: 4px;
+	position: absolute;
+	top: 50%;
+	right: 13px;
+	transform: translatey(-50%);
+}
+.b-frm-col.loc:after{
+	background: url(https://webdev.wordpress-developer.us/airporttransfer/wp-content/uploads/2023/03/loc-black.svg) center center no-repeat rgba(0, 0, 0, 0.12);
+	background-size: 13px;
+}
+.b-frm-col.date:after{
+	background: url(https://webdev.wordpress-developer.us/airporttransfer/wp-content/uploads/2023/03/date-icon.png) center center no-repeat rgba(0, 0, 0, 0.12);
+	z-index: 1;
+	background-color: unset;
+	background-size: 100%;
+	pointer-events: none;
+}
+.b-frm-col.date{
+	padding-right: 13px;
+	z-index: 1;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #e0e0e0;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+	margin-top: -20px;
+}
+.b-frm-col.time:after{
+	background: url(https://webdev.wordpress-developer.us/airporttransfer/wp-content/uploads/2023/03/time.svg) center center no-repeat rgba(0, 0, 0, 0.12);
+	background-size: 13px;
+}
+.b-frm-col.btn-col:after{
+	display: none;
+}
+/*book form*/
+/* custom radio */
+.form_input_radio{
+	display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.form_input_radio label {
+    position: relative;
+    margin: 0;
+    padding-left: 30px;
+    display: inline-block;
+    line-height: 1.5;
+    color: #787878;
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+.form_input_radio label span {
+    margin: 0;
+    padding: 0;
+}
+.form_input_radio label input[type="radio"] {
+    visibility: hidden;
+    display: none;
+}
+.form_input_radio label input[type="radio"]+span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #000000;
+    border-radius: 100%;
+    background: #fff;
+}
+.form_input_radio label input[type="radio"]+span::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #118B9E;
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.form_input_radio label input[type="radio"]:not(:checked)+span::after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+/* .form_input_radio input[type="radio"]:checked + span::before {
+      
+} */
+.form_input_radio label input[type="radio"]:checked+span:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+
+/* custom radio end */
+/* custom checkbox */
+.form_input_check span{
+	color: #fff;
+	cursor: pointer;
+	font-weight: 600;
+	text-shadow: 1px 2px #000000b5;
+}
+.form_input_check input{
+	cursor: pointer;
+}
+.form_input_check{
+	margin-bottom: 10px;
+}
+/* .form_input_check label {
+    position: relative;
+    margin: 0;
+    padding-left: 40px;
+    display: inline-block;
+}
+
+.form_input_check label span {
+    margin: 0;
+    padding: 0;
+}
+
+.form_input_check label input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+}
+
+.form_input_check label input[type="checkbox"]+span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #3E3E42;
+    background: transparent;
+}
+
+.form_input_check label input[type="checkbox"]+span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 22px;
+    height: 22px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    background: url(images/tick.svg) no-repeat center center;
+    background-size: 15px;
+}
+
+.form_input_check label input[type="checkbox"]:not(:checked)+span::after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+
+/* .form_input_check input[type="checkbox"]:checked + span::before {
+      
+    } */
+
+/* .form_input_check label input[type="checkbox"]:checked+span:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+} */
+
+/*checkbox-end*/
+.nrm-info{
+	margin-bottom: 10px;
+	color: #fff;
+	text-shadow: 1px 2px #000000b5;
+}
+.nrm-info span{
+	font-weight: 700;
+	animation: blink 3s infinite;
+}
+@keyframes blink {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+.select-info{
+	font-size: 15px;
+    line-height: 1.5;
+    color: #787878;
+}
+.select-info h3{
+	font-size: 20px;
+    color: #000;
+    font-weight: 700;
+    margin: 0;
+	line-height: 1.5;
+	margin-bottom: 5px;
+}
+#map_canvas_route {
+    height: 300px !important;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.radio-btn-outer{
+	margin-bottom: 7px;
+	margin-top: 10px;
+}
+.info-outer{
+	display: flex;
+}
+.info-col{
+	width: 33.33%;
+}
+.info-col:not(:last-child){
+	padding-right: 10px;
+}
+.info-outer2{
+	display: flex;
+}
+.info-col2:first-child{
+	width: 67%;
+}
+.info-col2:last-child{
+	width: 33%;
+}
+.bk-ride-2 .elementor-button, .bk-ride-2 input[type="submit"]{
+	background: #fff !important;
+	color: #000 !important;
+}
+.bk-ride-2 .elementor-button:hover, .bk-ride-2 input[type="submit"]:hover{
+	background: #000 !important;
+	color: #fff !important;
+}
+.she-header .top-header{
+	display: none;
+}
+.she-header .main-header{
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	background-color: #1d9aad94 !important;
+}
+.acco-faq .elementor-tab-title{
+	background: #F5F5F5;
+	padding: 25px 45px !important;
+}
+.acco-faq .elementor-tab-title.elementor-active{
+	background: #fff;
+	border-top: 1px solid #EEEEEE;
+	border-right: 1px solid #EEEEEE;
+	border-left: 4px solid #1D9AAD !important;
+}
+.acco-faq .elementor-tab-content{
+	padding: 0 45px 35px 45px !important;
+}
+.acco-faq .elementor-tab-content.elementor-active{
+	border-right: 1px solid #EEEEEE;
+	border-bottom: 1px solid #EEEEEE;
+	border-left: 4px solid #1D9AAD !important;
+}
+.acco-faq .elementor-accordion-item:not(:last-child){
+	margin-bottom: 20px;
+}
+.acco-faq .elementor-tab-content ul{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+.acco-faq .elementor-tab-content ul li{
+	position: relative;
+	padding-left: 22px;
+}
+.acco-faq .elementor-tab-content ul li:after{
+	content: '';
+	display: block;
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	left: 0;
+	top: 8px;
+	background: url(https://webdev.wordpress-developer.us/airporttransfer/wp-content/uploads/2023/03/Check2.svg) center center no-repeat;
+	background-size: 100%;
+}
+body.openpopup{
+	overflow: hidden !important;
+}
+.book-popup {
+    display: none;
+    background-color: #000000b5;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: all 0.4s ease-in-out;
+	padding: 15px;
+}
+.book-popup-inner {
+    background-color: #FFF;
+    border-radius: 19px;
+    padding: 30px;
+    width: 100%;
+	max-width: 1140px;
+    height: 635px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	position: relative;
+}
+/* .bk-ride-2 .book-popup {
+	left: unset;
+	right: 0 !important;
+	top: 0;
+} */
+
+.book-popup.active{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.popup-close{
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	width: 25px;
+}
+.book-popup-outer{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+}
+.car-box-scroll {
+    height: 530px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.car-box-scroll .car-box-outer:not(:last-child){
+	margin-bottom: 30px;
+}
+.popup-col {
+	width: 50%;
+	padding: 0 15px;
+}
+.b-popup-right h4{
+	color: #000;
+	margin-top: 0;
+	margin-bottom: 15px;
+	font-weight: 700;
+}
+.car-box-outer{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+}
+.car-left-col, .car-right-col{
+	width: 50%;
+	padding: 0 15px;
+}
+.car-left-col figure, .car-left-col img{
+	width: 100%;
+}
+.car-price, .car-option{
+	margin-bottom: 30px;
+}
+.car-option{
+	display: flex;
+}
+.car-option .icon:not(:last-child){
+	margin-right: 15px;
+}
+.car-option .icon{
+	width: 40px;
+	position: relative;
+	padding-left: 15px;
+}
+.car-option .icon span{
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: #000;
+	font-weight: 700;
+	line-height: 1;
+}
+
+
+
+/* //ks// */
+.rental .elementor-element-ec02359::before{
+	position:absolute;
+	content:"";
+	height:100px;
+	width:100px;
+	bottom: -31px;
+  right: -52px;
+	background:url("https://webdev.wordpress-developer.us/airporttransfer/wp-content/uploads/2023/03/Dot-Rental.svg") no-repeat;
+}
+.route::before{
+	position: absolute;
+	content:"";
+	width: 40%;
+	height: 90%;
+	left: 0px;
+  top: 43px;
+	background-color: #CEF5FB;
+	z-index:-1;
+}
+.fleet .elementor-element-bff4b3d::before{
+	position:absolute;
+	content:"";
+	height:42px;
+	width:100px;
+  top: 35px;
+  left: -47px;
+
+	background:url("https://webdev.wordpress-developer.us/airporttransfer/wp-content/uploads/2023/03/Dot-fleet.svg") no-repeat;
+}
+.Conta .elementor-icon-box-title span{
+	color:#000 !important;
+}
+.Conta .elementor-widget-container {
+    min-height: 293px;
+}
+.contact-for .elementor-element-ceebbf9::before{
+	position: absolute;
+	content:"";
+	width: 100%;
+	height: 85%;
+  left: -36px;
+  top: 25px;
+	z-index:-1;
+
+	background: rgba(206, 245, 251, 0.35);
+}
+
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
+	border:1px solid #EAEAEA !important;
+	border-radius:5px !important;
+}
+.taxi .elementor-element-2a495c5::before{
+		position:absolute;
+	content:"";
+	height:100px;
+	width:100px;
+	bottom: -50px;
+  left: -28px;
+	background:url("https://webdev.wordpress-developer.us/airporttransfer/wp-content/uploads/2023/03/Dot-Rental.svg") no-repeat;
+}
+.taxi::before{
+	position: absolute;
+	content:"";
+	width: 40%;
+	height: 48%;
+	right: 0px;
+  bottom: 50px;
+	background-color: #CEF5FB;
+	z-index:-1;
+}
+.taxi-sec::before {
+    position: absolute;
+    content: "";
+    width: 28%;
+    height: 360px;
+    right: 0px;
+    bottom: 0px;
+    background: url(https://webdev.wordpress-developer.us/airporttransfer/wp-content/uploads/2023/03/taxi-over.png) no-repeat;
+    background-size: 100%;
+}
+.inner-lorem .elementor-cta a{
+	padding:0 !important;
+}
+.inner-lorem .elementor-cta .elementor-cta__button-wrapper::before{
+	position:absolute;
+	content:"";
+	width:20%;
+	height:40%;
+	background-position:center;
+	background:url("https://webdev.wordpress-developer.us/airporttransfer/wp-content/uploads/2023/03/Arrow-1.svg") no-repeat;
+top: 9px;
+    left: 90px;
+}
+.Conta p.elementor-icon-box-description {
+    word-wrap: break-word;
+}
+.tour .elementor-element-5006ba9::before{
+		position:absolute;
+	content:"";
+	height:100px;
+	width:100px;
+	bottom: -42px;
+  left: -28px;
+	background:url("https://webdev.wordpress-developer.us/airporttransfer/wp-content/uploads/2023/03/Dot-Rental.svg") no-repeat;
+}
+.belgium .elementor-element-d4fe299::before{
+	position:absolute;
+	content:"";
+	height:100px;
+	width:100px;
+	bottom: -42px;
+  left: -28px;
+	background:url("https://webdev.wordpress-developer.us/airporttransfer/wp-content/uploads/2023/03/Dot-Rental.svg") no-repeat;
+}
+.amsterdum .elementor-element-88591c0::before{
+	position:absolute;
+	content:"";
+	height:100px;
+	width:100px;
+	bottom: -33px;
+  	left: -38px;
+	background:url("https://webdev.wordpress-developer.us/airporttransfer/wp-content/uploads/2023/03/Dot-Rental.svg") no-repeat;
+}
+.rate-table h2#tablepress-1-name {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 34px 0 10px 30px;
+    text-transform: capitalize;
+    color: #000000;
+		margin:0;
+}
+.rate-table span#tablepress-1-description {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #5B5B5B;
+    padding: 0 0 35px 30px;
+}
+.rate-table th.column-1{
+	padding-left:74px !important;
+}
+.rate-table th.column-1, .rate-table th.column-2 {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25px;
+    color: #FFFFFF;
+		padding: 20px 0 22px 0;
+		background-color:#7A7A7A;
+}
+.rate-table td.column-1{
+		padding-left:74px !important;
+}
+.rate-table td.column-1, .rate-table td.column-2{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #454545;
+		padding:21px 0;
+
+}
+.rate-table .tablepress{
+	margin:0;
+}
+.elementor-element-24345eb{
+		min-height: 539px;
+    margin-right: 59px;
+}
+.taxi-for .elementor-element-52eaef7d::before{
+	position: absolute;
+	content:"";
+	width: 100%;
+	height: 85%;
+  	right: -37px;
+  	top: 25px;
+	z-index:-1;
+
+	background: rgba(206, 245, 251, 0.35);
+}
+/*woocommerce*/
+.woocommerce{
+	padding: 50px 0;
+}
+.button.wp-element-button{
+	font-family: "Open Sans", Sans-serif;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    line-height: 19px !important;
+    color: #fff !important;
+    background-color: #118b9e !important;
+    border-style: solid !important;
+    border-width: 1px 1px 1px 1px !important;
+    border-color: #118b9e !important;
+    border-radius: 0px 0px 0px 0px !important;
+    padding: 16px 31px 16px 31px !important;
+}
+.button.wp-element-button:hover, #place_order:hover {
+	color: #118b9e !important;
+	background-color: transparent !important;
+}
+.woocommerce-billing-fields, .woocommerce-additional-fields{
+	padding: 15px;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	border-radius: 15px;
+	margin-bottom: 20px;
+}
+.woocommerce input[type="text"], 
+.woocommerce input[type="email"], 
+.woocommerce input[type="tel"],
+.woocommerce textarea,
+.woocommerce select{
+	font-family: 'Open Sans';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #000000;
+    padding: 10px;
+    border: 1px solid #118b9e;
+    outline: 0;
+    box-shadow: unset;
+    background: #fff;
+	border-radius: 5px;
+}
+.select2-container .select2-selection--single {
+    height: 41px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 41px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 41px;
+}
+.select2-container--default .select2-selection--single {
+    border: 1px solid #118b9e;
+    border-radius: 5px;
+}
+.woocommerce-terms-and-conditions-wrapper{
+	margin-bottom: 10px;
+}
+.woocommerce #content table.cart td.actions .input-text, .woocommerce table.cart td.actions .input-text, .woocommerce-page #content table.cart td.actions .input-text, .woocommerce-page table.cart td.actions .input-text {
+    width: 150px;
+	height: 52px;
+	border: 1px solid #000;
+}
+.checkout.woocommerce-checkout{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+}
+.checkout.woocommerce-checkout #customer_details, .checkout.woocommerce-checkout .checkoutright{
+	width: 50%;
+	padding: 0 15px;
+}
+.checkout.woocommerce-checkout .col-1{
+	width: 100%;
+}
+.woocommerce-order-overview{
+	padding: 0;
+	margin: 0 !important;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px !important;
+	margin-bottom: 30px !important;
+}
+.woocommerce-order-overview li{
+	 width: 33.33%;
+     margin: 0 !important;
+    padding: 10px 15px !important;
+}
+
+
+.woocommerce-thankyou-order-received{
+	margin-bottom: 15px !important;
+}
+.woocommerce-customer-details address{
+    line-height: 1.5em;
+	font-weight: 700;
+	padding: 15px;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    border-radius: 15px;
+}
+.woocommerce-NoticeGroup.woocommerce-NoticeGroup-checkout{
+	display: none !important;
+}
+.coupon button[type="submit"], .wc-proceed-to-checkout .checkout-button{
+	font-family: open sans,Sans-serif;
+	font-size: 14px !important;
+	font-weight: 700 !important;
+	line-height: 19px !important;
+	color: #fff !important;
+	background-color: #118b9e !important;
+	border-style: solid !important;
+	border-width: 1px !important;
+	border-color: #118b9e !important;
+	border-radius: 0 0 0 0 !important;
+	padding: 16px 31px !important;
+}
+.coupon button[type="submit"]:hover, .wc-proceed-to-checkout .checkout-button:hover{
+	color: #118b9e !important;
+	background-color: initial !important;
+}
+
+
+/*woocommerce*/
+
+/*Responsive*/
+
+@media(max-width:1366px){
+	.rental .elementor-element-ec02359::before {
+    right: -9px;
+}
+	.fleet .elementor-element-bff4b3d::before {
+    top: 8px;
+    left: 2px;
+	}
+	.tour .elementor-element-5006ba9::before {
+    left: 0;
+	}
+	.taxi-sec::before {
+		width: 27%;
+		height: 300px;
+	}
+}
+
+@media (max-width:1024px){
+	.header-right{
+		order: 2;
+	}
+	.nav-col{
+		order: 3;
+	}
+	.fleet .elementor-element-bff4b3d::before {
+    	top: -34px;
+}
+	.route::before {
+		height: 75%;
+	}
+	.Conta .elementor-container{
+		justify-content: center;
+	}
+.Conta .elementor-inner-column{
+	width:33%;
+}
+	.taxi::before {
+		height: 45%;
+		bottom: 40px;
+	}
+	.banner:after {
+		width: 280px;
+		height: 195px;
+	}
+	.route::before {
+		width: 40%;
+		height: 50%;
+		top: unset;
+		bottom: 30px;
+	}
+	.taxi-sec::before {
+		width: 30%;
+		height: 192px;
+	}
+	.rate-table h2#tablepress-1-name {
+    	padding: 30px 0 10px 20px;
+	}
+	.rate-table span#tablepress-1-description {
+		padding: 0 0 30px 20px;
+	}
+	.rate-table th.column-1, .rate-table th.column-2 {
+		padding: 15px !important;
+	}
+	.rate-table td.column-1, .rate-table td.column-2 {
+		padding: 15px !important;
+	}
+	
+}
+@media (max-width:1024px){
+	.book-popup-inner {
+		border-radius: 15px;
+		padding: 15px;
+		height: 500px;
+	}
+	.b-popup-right h4 {
+		font-size: 20px;
+	}
+	.select-info {
+		font-size: 11px;
+	}
+	#map_canvas_route {
+		height: 250px !important;
+	}
+	.car-box-outer {
+		 font-size: 12px;
+    	line-height: 1.5;
+	}
+	.book-popup-outer .elementor-button {
+		font-size: 12px;
+		line-height: 16px;
+		padding: 12px 18px 12px 18px;
+	}
+	.car-left-col, .car-right-col {
+		padding: 0 10px;
+	}
+	.car-box-outer {
+		margin: 0 -10px;
+	}
+	.car-box-scroll .car-box-outer:not(:last-child) {
+		margin-bottom: 15px;
+	}
+	.car-box-scroll {
+		height: 415px;
+	}
+	
+}
+@media (max-width:767px){
+	.route::before {
+    height: 42%;
+    top: unset;
+    bottom: 0;
+}
+	.Conta .elementor-inner-column{
+	width:100%;
+}
+	.taxi::before {
+    height: 23%;
+    width: 65%;
+    bottom: 12px;
+}
+	.taxi .elementor-element-2a495c5::before {
+    left: 0;
+	}
+	.acco-faq .elementor-tab-title {
+		padding: 15px 15px !important;
+	}
+	.acco-faq .elementor-tab-content {
+		padding: 0 15px 20px 15px !important;
+	}
+	.acco-faq .elementor-accordion-item:not(:last-child) {
+		margin-bottom: 10px;
+	}
+	.popup-col {
+		width: 100%;
+	}
+	.popup-close {
+		width: 18px;
+	}
+	.book-popup {
+		overflow-x: hidden;
+    	overflow-y: scroll;
+		align-items: flex-start !important;
+	}
+	.book-popup-inner {
+		height: auto;
+	}
+	.b-popup-left{
+		margin-bottom: 20px;
+	}
+	.car-box-scroll {
+		height: unset;
+	}
+	.bk-ride-2 .book-popup {
+		top: 0;
+	}
+	.checkout.woocommerce-checkout{
+		flex-direction: column;
+	}
+	.checkout.woocommerce-checkout #customer_details, .checkout.woocommerce-checkout .checkoutright{
+		width: 100%;
+	}
+	.woocommerce-order-overview li{
+		width: 100%;
+		margin-bottom: 5px !important;
+	}
+	.woocommerce table.shop_table_responsive tr td, .woocommerce-page table.shop_table_responsive tr td{
+		text-align: left !important;
+	}
+	.shop_table dt{
+		font-weight: 700;
+	}
+	
+}
+
+
+.product-name a {
+color: #118b9e !important;
+font-weight: bold;
+pointer-events: none; 
+}
+
+a.showcoupon{
+
+	color: #118b9e !important;
+font-weight: bold;
+
+
+}
+
+a.woocommerce-privacy-policy-link{
+
+	color: #118b9e !important;
+font-weight: bold;
+
+}
